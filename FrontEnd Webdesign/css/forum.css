@@ -1,0 +1,317 @@
+#header{
+  width: 85%;
+  background-color: lightgrey;
+  margin: 3rem auto 2rem;
+  min-height: 15rem;
+  position: relative;
+  box-shadow: 1px 1px 2px black;
+  border: 1px solid black;
+  border-radius: 0.3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: center;
+}
+
+#header h1{
+  font-size: 1.3rem;
+  padding: 0 0;
+  margin: 1rem 0 0 0;
+}
+
+#header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#welcome{
+  padding: 0.2rem 0.8rem 0.5rem 0.8rem;
+}
+
+#welcome p{
+  padding: 1rem 0;
+  font-size: 0.9rem;
+}
+
+#search-topic-form{
+  bottom: 1rem;
+}
+
+#search-topic-form input[type="text"]{
+  width: 100%;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+#search-topic-form input[type="submit"]{
+  width: 45%;
+  max-width: 5rem;
+  margin-top: 0.4em;
+}
+
+
+#topicTitle{
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+  padding: 2px 2px 2px 6px;
+  border-radius: 3px
+}
+
+
+#header aside{
+  margin: 1.3rem;
+  padding: 0.2rem;
+  background-color: white;
+  width: 30%;
+  max-width: 15rem;
+  min-width: 8rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 1px 1px 2px black;
+  border: 1px solid black;
+  border-radius: 0.6rem;
+  text-align: left;
+}
+
+#header aside section{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.1rem 0.4rem;
+  font-size: 0.7rem;
+  align-items: center;
+}
+
+#topics {
+  width: 85%;
+  margin: 1.5rem auto;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  min-height: 70%;
+  box-shadow: 1px 1px 2px black;
+  background-color: white;
+  z-index: 100;
+}
+
+#topics-header{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 3rem;
+  justify-content: space-between;
+  background-color: var(--header-color);
+}
+
+#topics-header button{
+  width: 20%;
+  height: 2.4rem;
+  margin: auto 0.4rem;
+  min-width: 7rem;
+  z-index: 2;
+  box-shadow: 1px 1px 5px black;
+}
+
+#topics-header h1{
+  width: 80%;
+  font-size: 1.5rem;
+  margin: auto;
+  transform: translateX(-15%);
+}
+
+
+.topic{
+  background-color: var(--light-background-color);
+  border: 2px solid black;
+  margin: 0.4rem 0.5rem;
+  min-height: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+}
+
+.topic:nth-child(even){
+  background-color: var(--darker-color);
+}
+
+.forum-topic:nth-child(odd){
+  background-color: #ababab;
+}
+
+#create-topic-popup{
+  background-color: var(--light-background-color);
+  z-index: 100;
+  position: absolute;
+  width: 80%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-45%);
+  border: 3px solid black;
+}
+
+#create-topic-popup form{
+  background-color: var(--light-background-color);
+  padding: 0.4rem 0.5rem;
+}
+
+.topic-title{
+  width: 100%;
+  border: 2px solid black;
+  box-sizing: border-box;
+  height: 2rem;
+  padding-left: 0.5rem;
+}
+
+.topic-text{
+  width: 100%;
+  min-height: 20rem;
+  margin-top: 0.5rem;
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 5px;
+  resize: none;
+}
+
+.username{
+  border: 2px solid black;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-bottom: 0.5rem;
+  width: 50%;
+}
+
+#button-container{
+  text-align: center;
+}
+
+#button-container * {
+  margin: 0.4rem 1rem;
+  padding: 0.2rem;
+  border: 1px solid black;
+  box-shadow: 1px 1px 2px black;
+  border-radius: 4px;
+}
+
+#button-container button{
+  background-color: lightgray;
+}
+
+#button-container button:hover{
+  background-color: gray;
+}
+
+#button-container input[type="submit"]{
+  background-color: green;
+}
+
+#button-container input[type="submit"]:hover{
+  background-color: darkgreen;
+}
+
+@media only screen and (min-width: 600px) {
+  #header h1{
+   font-size: 1.6rem;
+ }
+  #welcome p{
+    font-size: 1.1rem;
+  }
+
+  #search-topic-form{
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    bottom: 2rem;
+  }
+
+  #search-topic-form input[type="text"]{
+    width: 50%;
+    max-width: 20em;
+    text-align: left;
+  }
+
+  #search-topic-form input[type="submit"]{
+    margin-top: 0;
+  }
+
+  #header aside section{
+    justify-content: space-between;
+    padding: 0.1rem 0.4rem;
+    font-size: 1rem;
+    align-items: center;
+  }
+
+  #welcome p{
+    text-align: left;
+    font-size: 1.1rem;
+  }
+
+  #button-container * {
+    padding: 0.5rem 2rem;
+  }
+
+
+
+}
+
+@media only screen and (min-width: 992px) {
+  #header h1{
+    font-size: 1.6rem;
+    text-align: left;
+    padding: 0.8rem;
+  }
+
+  #header aside{
+    margin: 1.3rem;
+    padding: 0.8rem 0.2rem;
+  }
+
+  #header aside section{
+    padding: 0.3rem 0.4rem;
+    font-size: 1.1rem;
+  }
+
+  #welcome p{
+    font-size: 1.3rem;
+  }
+
+  #search-topic-form{
+    width: 100%;
+    text-align: left;
+    position: absolute;
+    bottom: 2rem;
+  }
+
+  #search-topic-form input[type="text"]{
+    width: 50%;
+    max-width: 20em;
+    text-align: left;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  #search-topic-form input[type="submit"]{
+    margin-top: 0;
+    padding: 0.3rem;
+    font-size: 1.2rem;
+  }
+
+  .topic{
+    font-size: 1.3rem !important;
+  }
+
+  #topics-header button{
+     width: 15%;
+     height: 2.5rem;
+   }
+
+  #topics-header h1{
+    transform: translateX(-10%);
+  }
+
+  #create-topic-popup{
+    box-shadow: 2px 2px 5px black;
+  }
+}

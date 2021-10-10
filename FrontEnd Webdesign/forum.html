@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CryptoTalk</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/forum.css">
+  <script defer src="js/forum.js"></script>
+  <script defer src="js/pageIndependentScripts.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+
+<header>
+  <div id="logo">
+    <a href="index.html">
+      <img src="img/ForumLogo.png">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a class="current" href="forum.html">Forum</a>
+    <a href="account.html">Account</a>
+  </nav>
+</header>
+
+<main>
+  <section id="header">
+    <h1>Welcome to the forum!</h1>
+    <div id="header-container">
+      <div id="welcome">
+        <p>Share your crypto experiences and join the community!</p>
+        <form id="search-topic-form">
+          <input type="text" id="topicTitle" name="topicTitle" placeholder="Search on title">
+          <input type="submit" class="button" id="search-submit-button"  value="Search">
+        </form>
+      </div>
+      <aside>
+        <section>
+          <p>Total topics:</p>
+          <p id="topic-amount">100</p>
+        </section>
+        <section>
+          <p>Total posts:</p>
+          <p id="post-amount">200</p>
+        </section>
+        <section>
+          <p>Registered members:</p>
+          <p id="member-amount">350</p>
+        </section>
+      </aside>
+    </div>
+  </section>
+
+  <section id="topics" class="rounded-corners white-halo">
+    <div id="topics-header" class="section-header-blue">
+      <button class="button" onclick="openCreateTopic()">Create</button>
+      <h1 >Crypto talk</h1>
+    </div>
+    <div id="topic-container">
+      <section id="topic-loading" class="topic">
+        <p>Loading...</p>
+      </section>
+    </div>
+  </section>
+
+  <section id="create-topic-popup" style="display:none" class="rounded-corners white-halo">
+    <h1 class="section-header-blue">Create Topic</h1>
+    <form id="create-topic-form">
+      <input type="text" class="topic-title" name="topicTitle" placeholder="Enter your topic title here.." required>
+      <textarea  class="topic-text" name="topicText" placeholder="Topic text..."></textarea>
+      <input type="text" class="username" name="username" placeholder="Your username..">
+
+      <div id="button-container">
+        <input type="submit" value="Create">
+        <button onclick="closeCreateTopic()">Cancel</button>
+      </div>
+    </form>
+  </section>
+
+</main>
+
+
+</body>
+</html>

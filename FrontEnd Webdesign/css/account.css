@@ -1,0 +1,131 @@
+main {
+  margin: 5rem 10%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+}
+
+.account-input-container{
+  margin: 2rem 0;
+  background-color: lightgray;
+  min-height: 10rem;
+  border: 2px solid black;
+  max-width: 35rem;
+  width: 100%
+}
+
+.account-input-container form{
+  margin: 1.5rem 0 1rem 0;
+}
+
+.input-group{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 0.2rem 0.5rem;
+}
+
+.input-group select{
+  width: 50%;
+  max-width: 20rem;
+  border-radius: 0.2rem;
+  border: 1px solid black;
+  padding: 0 0 0 0.2rem;
+}
+.input-group input{
+  width: 50%;
+  max-width: 20rem;
+  padding: 0 0 0 0.5rem;
+}
+
+.account-input-container input[type="submit"]{
+  width: 45%;
+  max-width: 5rem;
+  margin: 1rem auto 0 auto;
+  display: block;
+}
+
+#search-account-form{
+  margin: 0;
+  padding: 0.2rem 0.4rem 0.6rem 0.4rem;
+  box-shadow: 1px 1px 1px ;
+}
+
+#search-account-form input[type="text"]{
+  width: 60%;
+  padding: 0.2rem 0.4rem;
+}
+
+#search-account-form input[type="submit"]{
+  margin-right: 0.2rem;
+  width: 10rem;
+  min-width: 6rem;
+}
+
+#submit-search-account{
+  margin: 0;
+  max-width: 4rem;
+}
+
+.flex-row-between{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#submit-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 0.5rem 0 1.5rem 0;
+}
+
+#edit{
+  background-color: green;
+  min-width: 40%;
+  height: 2rem;
+  border: 2px solid black;
+}
+
+#edit:hover{
+  background-color: darkgreen;
+}
+
+#delete {
+  background-color: red;
+  min-width: 40%;
+  height: 2rem;
+  border: 2px solid black;
+}
+
+#delete:hover{
+  background-color: darkred;
+}
+
+
+@media only screen and (min-width: 600px) {
+
+}
+
+
+
+@media only screen and (min-width: 992px) {
+  main {
+    flex-direction: row;
+    align-items: flex-start;
+    margin: auto 15%;
+  }
+
+  .account-input-container{
+    max-width: 35rem;
+    margin-top: 20%;
+    width: 45%;
+  }
+
+  .input-group{
+    margin: 0.5rem;
+    height: 1.8rem
+  }
+
+}

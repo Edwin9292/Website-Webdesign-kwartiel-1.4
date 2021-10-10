@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CryptoTalk</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/account.css">
+
+  <script defer src="js/account.js"></script>
+  <script defer src="js/pageIndependentScripts.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+
+<header>
+  <div id="logo">
+    <a href="index.html">
+      <img src="img/ForumLogo.png">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="forum.html">Forum</a>
+    <a class="current" href="account.html">Account</a>
+  </nav>
+</header>
+
+<main>
+  <section class="account-input-container rounded-corners white-halo">
+    <h1 class="section-header-blue">Create account</h1>
+    <form id = "create-account-form">
+      <div class="input-group">
+        <label for="fname">First name: </label>
+        <input type="text" id="fname" name="firstName" placeholder="firstname">
+      </div>
+
+      <div class="input-group">
+        <label for="lname">Last name: </label>
+        <input type="text" id="lname" name="lastName" placeholder="lastname">
+      </div>
+
+      <div class="input-group">
+        <label for="age">Age: </label>
+        <input type="text" id="age" name="age" placeholder="age">
+      </div>
+
+      <div class="input-group">
+        <label for="username">Username: </label>
+        <input type="text" id="username" name="username" placeholder="username">
+      </div>
+
+
+      <div class="input-group">
+        <label for="investor-type">Investor type: </label>
+        <select id="investor-type" name="investorType">
+          <option value="Beginner">Beginner</option>
+          <option value="Experienced">Experienced</option>
+          <option value="Whale">Whale</option>
+        </select>
+      </div>
+
+      <input type="submit" class="button"  value="Create">
+    </form>
+  </section>
+
+
+
+  <section class="account-input-container rounded-corners white-halo">
+    <h1 class="section-header-blue">Edit Account</h1>
+    <section>
+      <form id="search-account-form">
+        <label for="username">Enter a username to edit:</label>
+        <div class="flex-row-between ">
+          <input type="text" name="username" placeholder="username">
+          <input type="submit" class="button" id="submit-search-account" name="search" value="search">
+        </div>
+      </form>
+    </section>
+    <section>
+
+      <form id="edit-account-form">
+        <input type="hidden" id="user-id" name="id" >
+        <div class="input-group">
+          <label for="edit-fname">First name: </label>
+          <input type="text" id="edit-fname" placeholder="firstname" name="firstName" disabled>
+        </div>
+
+        <div class="input-group">
+          <label for="edit-lname">Last name: </label>
+          <input type="text" id="edit-lname" placeholder="lastname" name="lastName" disabled>
+        </div>
+
+        <div class="input-group">
+          <label for="edit-age">Age: </label>
+          <input type="text" id="edit-age" placeholder="age" name="age" disabled>
+        </div>
+
+        <div class="input-group">
+          <label for="edit-username">Username: </label>
+          <input type="text" id="edit-username" placeholder="username" name="username" disabled>
+        </div>
+
+
+        <div class="input-group">
+          <label for="edit-investor-type">Investor type: </label>
+          <select id="edit-investor-type" name="investorType" disabled>
+            <option value="Beginner">Beginner</option>
+            <option value="Experienced">Experienced</option>
+            <option value="Whale">Whale</option>
+          </select>
+        </div>
+
+        <div id="submit-container">
+          <input id="edit" onclick="this.parentNode.parentNode.value='Edit';"  type="submit" class="button" value="Edit" >
+          <input id="delete" onclick="this.parentNode.parentNode.value='Delete';"  type="submit" class="button" value="Delete" >
+        </div>
+       </form>
+    </section>
+  </section>
+</main>
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+

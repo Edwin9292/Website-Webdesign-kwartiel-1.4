@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CryptoTalk</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/topic.css">
+  <script defer src="js/topic.js"></script>
+  <script defer src="js/pageIndependentScripts.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+</head>
+<body>
+<header>
+  <div id="logo">
+    <a href="index.html">
+      <img src="img/ForumLogo.png">
+    </a>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="forum.html">Forum</a>
+    <a href="account.html">Account</a>
+  </nav>
+</header>
+
+<main>
+  <section id="topic-container" class="rounded-corners white-halo">
+    <h1 id="topic-title" class="section-header-blue">Topic title</h1>
+    <section id="topic-section">
+      <div id="topic-data-container">
+        <p id="topic-author">Author: </p>
+        <p id="topic-published">published: 01-01-2001</p>
+      </div>
+      <p id="topic-text"> loading.. </p>
+    </section>
+    <section id="replies-section">
+      <div class="flex-row-between">
+        <p>Replies</p>
+        <button onclick="showReplyPopup()" id="create-reply-button" class="button">Reply</button>
+      </div>
+      <div id="replies-container">
+        <div id="no-replies">
+          No replies have been made yet
+        </div>
+      </div>
+    </section>
+  </section>
+
+
+  <section id="create-reply-popup" style="display:none" class="rounded-corners white-halo">
+    <h1 class="section-header-blue">Create Reply</h1>
+    <form id="create-reply-form">
+      <textarea class="reply-text" name="text" placeholder="Reply text..."></textarea>
+      <input type="text" class="username" name="username" placeholder="Your username..">
+      <div id="button-container">
+        <input type="submit" value="Create">
+        <button onclick="hideReplyPopup()">Cancel</button>
+      </div>
+    </form>
+  </section>
+</main>
+
+</body>
+</html>
